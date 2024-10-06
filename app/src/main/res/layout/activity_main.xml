@@ -63,7 +63,7 @@
         android:layout_marginTop="76dp"
         android:background="@drawable/bg_btn"
         android:text="LOGIN"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/appCompatEditText1"
         tools:layout_editor_absoluteX="80dp" />
