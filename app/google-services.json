@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "230369910361",
+    "project_id": "login-register-b930e",
+    "storage_bucket": "login-register-b930e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230369910361:android:898a37dee578f5fcd1db48",
+        "android_client_info": {
+          "package_name": "com.example.onlineexamsystem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj66K5oz1ytDReXOsMk6kz1HS75h4qIUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
