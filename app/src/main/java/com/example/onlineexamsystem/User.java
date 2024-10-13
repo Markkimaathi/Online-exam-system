@@ -1,14 +1,14 @@
 package com.example.onlineexamsystem;
 
 public class User {
-    private String name;
-    private String email;
-    private String password;
+    private String UserName;
+    private String Email;
+    private String Password;
 
-    public User(String name, String email, String password){
-        name = name;
-        email = email;
-        password = password;
+    public User(String userName, String email, String password) {
+        UserName = userName;
+        Email = email;
+        Password = password;
     }
 
     public User(){
@@ -16,26 +16,26 @@ public class User {
     }
 
     public String getEmail() {
-        return email;
+        return Email;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        Email = email;
     }
 
     public String getPassword() {
-        return password;
+        return Password;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        Password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return UserName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserName(String userName) {
+        UserName = userName;
     }
 }
