@@ -10,7 +10,9 @@ public class DBHelper {
     private Context con;
     private SQLiteDatabase db;
 
-    public DBHelper(Context con) {this.con = con;}
+    public DBHelper(Context con) {
+        this.con = con;
+    }
 
     public DBHelper OpenDB() {
         DBConnector dbCon = new DBConnector(con);
@@ -18,7 +20,7 @@ public class DBHelper {
         return this;
     }
 
-    public boolean RegisterUser(User user){
+    public boolean RegisterUser(User user) {
         try {
             ContentValues cv = new ContentValues();
             cv.put("UserName", user.getUserName());
@@ -29,7 +31,23 @@ public class DBHelper {
             return true;
 
         } catch (Exception e) {
-            Toast.makeText(con, e.getMessage(),Toast.LENGTH_LONG).show();
+            Toast.makeText(con, e.getMessage(), Toast.LENGTH_LONG).show();
+            return false;
+        }
+    }
+
+    public boolean RegisterTeacher(Teacher teacher) {
+        try {
+            ContentValues cv = new ContentValues();
+            cv.put("UserName", teacher.getUserName());
+            cv.put("Email", teacher.getEmail()); // Fixed typo here
+            cv.put("Password", teacher.getPassword());
+
+            db.insert("teacherinfo", null, cv);
+            return true;
+
+        } catch (Exception e) {
+            Toast.makeText(con, e.getMessage(), Toast.LENGTH_LONG).show();
             return false;
         }
     }

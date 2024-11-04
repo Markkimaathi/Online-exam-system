@@ -1,17 +1,19 @@
 package com.example.onlineexamsystem;
 
-public class User {
+public class Teacher {
     private String UserName;
     private String Email;
+    private String StaffNo;
     private String Password;
 
-    public User(String userName, String email, String password) {
+    public Teacher(String userName, String email, String password, String staffno) {
         UserName = userName;
         Email = email;
         Password = password;
+        StaffNo = staffno;
     }
 
-    public User(){
+    public Teacher(){
 
     }
 
@@ -20,6 +22,10 @@ public class User {
     }
     public void setEmail(String email) {
         Email = email;
+    }
+
+    public void setStaffNo(String staffNo) {
+        StaffNo = staffNo;
     }
 
     public String getPassword() {

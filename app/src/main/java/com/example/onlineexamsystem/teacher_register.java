@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Register_Page extends AppCompatActivity {
+public class teacher_register extends AppCompatActivity {
 
     EditText EditTextUserName, EditTextTel, EditTextPassword, EditTextConfirmPassword;
 
@@ -19,7 +19,7 @@ public class Register_Page extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_page);
+        setContentView(R.layout.teacher_register);
 
         dbHelper = new DBHelper(this);
         dbHelper.OpenDB();
@@ -38,10 +38,10 @@ public class Register_Page extends AppCompatActivity {
                         EditTextPassword.getText().toString().isEmpty() ||
                         EditTextConfirmPassword.getText().toString().isEmpty()) {
 
-                    Toast.makeText(Register_Page.this, "Fields can't be blank", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(teacher_register.this, "Fields can't be blank", Toast.LENGTH_SHORT).show();
                 }
                 else if (!EditTextPassword.getText().toString().equals(EditTextConfirmPassword.getText().toString())) {
-                    Toast.makeText(Register_Page.this, "Password and Confirm Password should match", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(teacher_register.this, "Password and Confirm Password should match", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     User user = new User(EditTextUserName.getText().toString(),
@@ -49,11 +49,11 @@ public class Register_Page extends AppCompatActivity {
                             EditTextPassword.getText().toString());
 
                     if (dbHelper.RegisterUser(user)) {
-                        Toast.makeText(Register_Page.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(Register_Page.this, MainActivity.class);
+                        Toast.makeText(teacher_register.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(teacher_register.this, userlogin.class);
                         startActivity(intent);
                     } else {
-                        Toast.makeText(Register_Page.this, "User Registration Failed!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(teacher_register.this, "User Registration Failed!", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -61,7 +61,7 @@ public class Register_Page extends AppCompatActivity {
     }
 
     public void Login(View view){
-        Intent intent = new Intent(Register_Page.this, MainActivity.class);
+        Intent intent = new Intent(teacher_register.this, userlogin.class);
         startActivity(intent);
     }
 }

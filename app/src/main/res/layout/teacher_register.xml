@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register_Page"
+    tools:context=".teacher_register"
     android:background="@drawable/img">
 
     <TextView
-        android:layout_width="235dp"
-        android:layout_height="83dp"
-        android:text="Hello,Welcome"
+        android:layout_width="357dp"
+        android:layout_height="95dp"
+        android:text="Welcome to register page"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="32dp"
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="212dp"
         android:background="@drawable/bg_edtext"
         android:drawableLeft="@drawable/ic_user"
         android:drawablePadding="10dp"
@@ -35,10 +35,25 @@
         android:hint="User Name"
         android:paddingLeft="20dp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="24dp" />
+        tools:layout_editor_absoluteX="20dp" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/appCompatEditText1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="284dp"
+        android:background="@drawable/bg_edtext"
+        android:drawableLeft="@drawable/ic_phone"
+        android:drawablePadding="10dp"
+        android:elevation="5dp"
+        android:hint="staff No"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginHorizontal="20dp"
@@ -47,7 +62,7 @@
         android:drawableLeft="@drawable/ic_phone"
         android:drawablePadding="10dp"
         android:elevation="5dp"
-        android:hint="Mobile Number"
+        android:hint="Email"
         android:inputType="number"
         android:paddingLeft="20dp"
         app:layout_constraintTop_toTopOf="parent"
